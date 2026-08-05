@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Home",
+        "url": "index.html",
+        "keywords": "home main page welcome moving zavala forward mission",
+        "excerpt": "Zavala County's website helps you locate departments, forms, court information, and county programs."
+    },
+    {
+        "title": "Topics and Services",
+        "url": "alltopics.html",
+        "keywords": "topics services departments programs resources commissioners court agendas election results budget tax rate burn ban foreclosures rfp proposals inmate deposit jail tickets citations agriculture health property appraisal holidays",
+        "excerpt": "Find information on departments, programs, and resources available to Zavala County residents."
+    },
+    {
+        "title": "County Directory",
+        "url": "directory.html",
+        "keywords": "directory employees staff departments phone numbers contacts county officials names titles",
+        "excerpt": "Look up phone numbers and contacts for Zavala County departments and staff."
+    },
+    {
+        "title": "Contact Us",
+        "url": "contact.html",
+        "keywords": "contact phone number email main office records marriage license birth certificate death certificate utilities water bill trash landfill collection public information records request open records judge county clerk report a problem",
+        "excerpt": "Reach the Main Office, Office of Records, Utilities Office, or submit a Public Information Request."
+    },
+    {
+        "title": "About Us",
+        "url": "about.html",
+        "keywords": "about county judge clerk court system sheriff voting elections vote transportation roads bridges indigent defense lawyer property tax bill government how it works",
+        "excerpt": "Learn how county government works, and how to vote, get around, and access county resources."
+    },
+    {
+        "title": "Indigent Health Care Program",
+        "url": "health.html",
+        "keywords": "health care indigent program medicaid cancer screening mammogram primary care specialty care hospital inpatient outpatient emergency room low income no insurance medical assistance free clinic",
+        "excerpt": "Health care assistance for eligible residents who are not eligible for Medicaid or other coverage."
+    }
+]

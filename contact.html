@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Zavala County Contact Information">
+    <meta name="keywords" content="Zavala County, Contact, Email, Phone, Address">
+    <meta name="author" content="Kalah Kennebrew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zavala County Contact Us Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="zavala.css">
+    <script src="scripts/contacts.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="top-bar">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Zavala County homepage" class="logo">
+            </a>
+
+            <div class="header-utilities">
+
+                <a href="contact-es.html" class="language-link" lang="es">
+                    En Español
+                </a>
+
+                <div class="search-group">
+
+                    <label for="search" class="visually-hidden">Search the website</label>
+                    <input type="text" id="search" name="search" class="search-input" placeholder="Search the website"
+                        autocomplete="off">
+
+                    <button type="button" aria-label="Search">
+                        <img src="assets/search.png" class="search-icon" alt="">
+                    </button>
+
+                    <div id="search-status" class="visually-hidden" aria-live="polite"></div>
+                    <ul id="search-results" class="search-results" hidden></ul>
+                </div>
+
+            </div>
+
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+                <span class="nav-toggle-icon">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+
+            <ul id="primary-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="alltopics.html" class="nav-link">Topics and Services</a></li>
+                <li><a href="directory.html" class="nav-link">County Directory</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="txflag-banner">
+        <img src="assets/mocking-bird.jpg" alt="Mocking Bird on a branch">
+    </section>
+
+    <main id="main-content" class="container my-5">
+
+        <ul class="nav nav-tabs" id="contactTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="main-tab" data-bs-toggle="tab" data-bs-target="#main" type="button"
+                    role="tab">Main Office</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="records-tab" data-bs-toggle="tab" data-bs-target="#records" type="button"
+                    role="tab">Office of Records</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="utilities-tab" data-bs-toggle="tab" data-bs-target="#utilities"
+                    type="button" role="tab">Utilities Office</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="records-request-tab" data-bs-toggle="tab" data-bs-target="#records-request"
+                    type="button" role="tab">Public Information Requests</button>
+            </li>
+        </ul>
+
+        <div class="tab-content border border-top-0 p-4 bg-white" id="contactTabsContent">
+
+            <!-- Main office -->
+            <div class="tab-pane fade show active" id="main" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="h4">The Main Office</h2>
+                        <p>For any questions or concerns regarding Zavala County Courthouse, please contact us. Submit
+                            your questions or concerns below.</p>
+                        <p><strong>Phone:</strong> 830-374-3810<br>
+                            <strong>Email:</strong> judge@zavalacounty.gov
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="4" required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office of records -->
+            <div class="tab-pane fade" id="records" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="h4">Office of Records</h2>
+                        <p>For any questions or concerns regarding Land Deeds, Marriage Licenses, Birth Certificates, or
+                            Death Certificates, please feel free to contact us by submitting your questions or concerns
+                            below.
+                        </p>
+                        <p><strong>Phone:</strong> 830-374-2331<br>
+                            <strong>Email:</strong> countyclerk@zavalacounty.gov
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Which record are you interested in?</label>
+                                <select class="form-select">
+                                    <option>Birth certificate</option>
+                                    <option>Death certificate</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilities office -->
+            <div class="tab-pane fade" id="utilities" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="h4">Utilities Office</h2>
+                        <p>For any questions or concerns about county water bill, county trash collection, Landfill
+                            hours or directions, please submit your questions or concerns below.</p>
+                        <p><strong>Phone:</strong> 830-374-2095<br>
+                            <strong>Email:</strong> utility@zavalacounty.gov
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">What is this about?</label>
+                                <select class="form-select">
+                                    <option>Hours</option>
+                                    <option>Landfill</option>
+                                    <option>Trash collection</option>
+                                    <option>Water bill</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Public information requests -->
+            <div class="tab-pane fade" id="records-request" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="h4">Public Information Requests</h2>
+                        <p>Texas Government Code 552.002(a) defines "public information" as information that is written,
+                            produced, collected, assembled, or maintained under a law or ordinance, or in connection
+                            with the transaction of official business by a governmental body, or for a governmental body
+                            if the governmental body owns the information or has a right of access to it.</p>
+
+                        <h3 class="h6 mt-4">How to request public information</h3>
+                        <p>Your request must be in writing and addressed to Open Records. Only written requests trigger
+                            a governmental body's obligations to the Public Information Act. Requests made by mail or
+                            electronic mail must be addressed to Open Records in order to trigger and obligation under
+                            the Texas Public Information Act.</p>
+
+                        <ul>
+                            <li>Provide your full name and contact information, including email and/or fax if available.
+                            </li>
+                            <li>Head your correspondence "Public Information Request."</li>
+                            <li>Provide a detailed, precise description of the nature and scope of the information
+                                you're seeking.</li>
+                            <li>Requests should be for documents or other information that already exists.</li>
+                        </ul>
+
+                        <p>Requests can be submitted by email or mail to the addresses below.</p>
+                        <p><strong>Email:</strong> judge@zavalacounty.gov<br>
+                            <strong>Mail:</strong> Attention: Open Records<br>
+                            200 E Uvalde St. Ste 9<br>
+                            Crystal City, Texas 78839
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="border p-4">
+                            <h3 class="h6">Submit a request</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Phone or fax (optional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description of records requested</label>
+                                    <textarea class="form-control" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="footer-inner">
+
+                <div class="footer-columns">
+
+                    <div class="forms">
+                        <h3>Frequently Used Forms & Toolkit</h3>
+                        <button class="report-btn" onclick="window.location.href='contact.html'">Report a Website
+                            Issue</button>
+                    </div>
+
+                    <div>
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="about.html">About Zavala County</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>County Information</h4>
+                        <ul>
+                            <li><a href="directory.html">County Directory</a></li>
+                            <li><a href="alltopics.html">All Topics and Services</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-inner">
+                <h5>Zavala County Courthouse</h5>
+                <p>200 E. Uvalde Street</p>
+                <p>Crystal City, Texas 78839</p>
+                <p>Phone: 830-374-3810</p>
+            </div>
+        </div>
+        <button id="backToTop" onclick="scrollToTop()">↑ Top</button>
+        <div class="footer-bottom">
+            <div class="footer-inner">
+                <p>Copyright © Zavala County, Texas 2026. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts/search.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Información de Contacto del Condado de Zavala">
+    <meta name="keywords" content="Condado de Zavala, Contacto, Correo Electrónico, Teléfono, Dirección">
+    <meta name="author" content="Kalah Kennebrew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto del Condado de Zavala</title>
+    <link rel="alternate" hreflang="en" href="contact.html">
+    <link rel="alternate" hreflang="es" href="contact-es.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="zavala.css">
+    <script src="scripts/contacts.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+        <div class="top-bar">
+            <a href="index-es.html" class="logo-link">
+                <img src="assets/logo.png" alt="Página de inicio del Condado de Zavala" class="logo">
+            </a>
+
+            <div class="header-utilities">
+
+                <a href="contact.html" class="language-link" lang="en">
+                    In English
+                </a>
+
+                <div class="search-group">
+                    <label for="search" class="visually-hidden">Buscar en el sitio web</label>
+                    <input type="text" id="search" name="search" class="search-input"
+                        placeholder="Buscar en el sitio web" autocomplete="off">
+
+                    <button type="button" aria-label="Buscar">
+                        <img src="assets/search.png" class="search-icon" alt="">
+                    </button>
+
+                    <div id="search-status" class="visually-hidden" aria-live="polite"></div>
+                    <ul id="search-results" class="search-results" hidden></ul>
+                </div>
+
+            </div>
+
+        </div>
+        <nav aria-label="Navegación principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+                <span class="nav-toggle-icon">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </span>
+                <span class="nav-toggle-label">Menú</span>
+            </button>
+
+            <ul id="primary-nav">
+                <li><a href="index-es.html" class="nav-link">Inicio</a></li>
+                <li><a href="alltopics-es.html" class="nav-link">Temas y Servicios</a></li>
+                <li><a href="directory-es.html" class="nav-link">Directorio del Condado</a></li>
+                <li><a href="contact-es.html" class="nav-link active">Contáctenos</a></li>
+                <li><a href="about-es.html" class="nav-link">Acerca de Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="txflag-banner">
+        <img src="assets/mocking-bird.jpg" alt="Pájaro sinsonte en una rama">
+    </section>
+
+    <main id="main-content" class="container my-5">
+
+        <ul class="nav nav-tabs" id="contactTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="main-tab" data-bs-toggle="tab" data-bs-target="#main" type="button"
+                    role="tab">Oficina Principal</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="records-tab" data-bs-toggle="tab" data-bs-target="#records" type="button"
+                    role="tab">Oficina de Registros</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="utilities-tab" data-bs-toggle="tab" data-bs-target="#utilities"
+                    type="button" role="tab">Oficina de Servicios Públicos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="records-request-tab" data-bs-toggle="tab" data-bs-target="#records-request"
+                    type="button" role="tab">Solicitudes de Información Pública</button>
+            </li>
+        </ul>
+
+        <div class="tab-content border border-top-0 p-4 bg-white" id="contactTabsContent">
+
+            <!-- Oficina principal -->
+            <div class="tab-pane fade show active" id="main" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="h4">La Oficina Principal</h2>
+                        <p>Para cualquier pregunta o inquietud sobre el Palacio de Justicia del Condado de Zavala,
+                            contáctenos. Envíe sus preguntas o inquietudes a continuación.</p>
+                        <p><strong>Teléfono:</strong> 830-374-3810<br>
+                            <strong>Correo electrónico:</strong> judge@zavalacounty.gov
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Número de teléfono</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" rows="4" required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oficina de registros -->
+            <div class="tab-pane fade" id="records" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="h4">Oficina de Registros</h2>
+                        <p>Para cualquier pregunta o inquietud sobre escrituras de propiedad, licencias de
+                            matrimonio, actas de nacimiento o actas de defunción, no dude en contactarnos enviando
+                            sus preguntas o inquietudes a continuación.
+                        </p>
+                        <p><strong>Teléfono:</strong> 830-374-2331<br>
+                            <strong>Correo electrónico:</strong> countyclerk@zavalacounty.gov
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Número de teléfono</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">¿Qué registro le interesa?</label>
+                                <select class="form-select">
+                                    <option>Acta de nacimiento</option>
+                                    <option>Acta de defunción</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oficina de servicios públicos -->
+            <div class="tab-pane fade" id="utilities" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="h4">Oficina de Servicios Públicos</h2>
+                        <p>Para cualquier pregunta o inquietud sobre la factura de agua del condado, la recolección
+                            de basura, los horarios del vertedero o direcciones, envíe sus preguntas o inquietudes a
+                            continuación.</p>
+                        <p><strong>Teléfono:</strong> 830-374-2095<br>
+                            <strong>Correo electrónico:</strong> utility@zavalacounty.gov
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Dirección</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">¿De qué se trata esto?</label>
+                                <select class="form-select">
+                                    <option>Horarios</option>
+                                    <option>Vertedero</option>
+                                    <option>Recolección de basura</option>
+                                    <option>Factura de agua</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solicitudes de información pública -->
+            <div class="tab-pane fade" id="records-request" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="h4">Solicitudes de Información Pública</h2>
+                        <p>El Código de Gobierno de Texas 552.002(a) define la “información pública” como aquella
+                            información que es escrita, producida, recopilada, reunida o mantenida bajo una ley u
+                            ordenanza, o en relación con la gestión de asuntos oficiales por parte de un organismo
+                            gubernamental, o para un organismo gubernamental si este posee la información o tiene
+                            derecho de acceso a ella.</p>
+
+                        <h3 class="h6 mt-4">Cómo solicitar información pública</h3>
+                        <p>Su solicitud debe hacerse por escrito y dirigirse a Registros Abiertos. Solo las
+                            solicitudes por escrito generan las obligaciones de un organismo gubernamental bajo la
+                            Ley de Información Pública. Las solicitudes enviadas por correo postal o electrónico
+                            deben dirigirse a Registros Abiertos para generar una obligación bajo la Ley de
+                            Información Pública de Texas.</p>
+
+                        <ul>
+                            <li>Proporcione su nombre completo e información de contacto, incluyendo correo
+                                electrónico y/o fax si está disponible.
+                            </li>
+                            <li>Encabece su correspondencia con “Solicitud de Información Pública”.</li>
+                            <li>Proporcione una descripción detallada y precisa de la naturaleza y el alcance de la
+                                información que busca.</li>
+                            <li>Las solicitudes deben ser sobre documentos u otra información que ya exista.</li>
+                        </ul>
+
+                        <p>Las solicitudes pueden enviarse por correo electrónico o correo postal a las direcciones a
+                            continuación.</p>
+                        <p><strong>Correo electrónico:</strong> judge@zavalacounty.gov<br>
+                            <strong>Correo postal:</strong> Atención: Registros Abiertos<br>
+                            200 E Uvalde St. Ste 9<br>
+                            Crystal City, Texas 78839
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="border p-4">
+                            <h3 class="h6">Enviar una solicitud</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Teléfono o fax (opcional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Descripción de los registros solicitados</label>
+                                    <textarea class="form-control" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Enviar solicitud</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="footer-inner">
+
+                <div class="footer-columns">
+
+                    <div class="forms">
+                        <h3>Formularios y Recursos de Uso Frecuente</h3>
+                        <button class="report-btn" onclick="window.location.href='contact-es.html'">Reportar un
+                            Problema con el Sitio Web</button>
+                    </div>
+
+                    <div>
+                        <h4>Acerca de Nosotros</h4>
+                        <ul>
+                            <li><a href="about-es.html">Acerca del Condado de Zavala</a></li>
+                            <li><a href="contact-es.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Información del Condado</h4>
+                        <ul>
+                            <li><a href="directory-es.html">Directorio del Condado</a></li>
+                            <li><a href="alltopics-es.html">Todos los Temas y Servicios</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-inner">
+                <h5>Palacio de Justicia del Condado de Zavala</h5>
+                <p>200 E. Uvalde Street</p>
+                <p>Crystal City, Texas 78839</p>
+                <p>Teléfono: 830-374-3810</p>
+            </div>
+        </div>
+        <button id="backToTop" onclick="scrollToTop()">↑ Arriba</button>
+        <div class="footer-bottom">
+            <div class="footer-inner">
+                <p>Derechos de autor © Condado de Zavala, Texas 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts/search.js" defer></script>
+</body>
+
+</html>

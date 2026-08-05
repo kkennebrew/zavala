@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="What the county does, and how it works, in plain language.">
+    <meta name="keywords" content="Zavala County, About, Government, Services, Judge, Clerk, Sheriff">
+    <meta name="author" content="Kalah Kennebrew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zavala County About Us Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="zavala.css">
+    <script src="scripts/contacts.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="top-bar">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Zavala County homepage" class="logo">
+            </a>
+
+            <div class="header-utilities">
+
+                <a href="es.html" class="language-link" lang="es">
+                    En Español
+                </a>
+
+                <div class="search-group">
+                    <label for="search" class="visually-hidden">Search the website</label>
+                    <input type="text" id="search" name="search" class="search-input" placeholder="Search the website"
+                        autocomplete="off">
+
+                    <button type="button" aria-label="Search">
+                        <img src="assets/search.png" class="search-icon" alt="">
+                    </button>
+
+                    <div id="search-status" class="visually-hidden" aria-live="polite"></div>
+                    <ul id="search-results" class="search-results" hidden></ul>
+                </div>
+
+            </div>
+
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+                <span class="nav-toggle-icon">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+
+            <ul id="primary-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="alltopics.html" class="nav-link">Topics and Services</a></li>
+                <li><a href="directory.html" class="nav-link">County Directory</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="about.html" class="nav-link active">About Us</a></li>
+            </ul>
+        </nav>
+        <section class="latinfellowship-banner">
+            <img src="assets/latinwomen.jpg" alt="A group of Latin women standing together">
+        </section>
+    </header>
+
+    <main id="main-content" class="container my-5" style="max-width: 900px;">
+        <article>
+            <h1>About Zavala County, Texas
+
+            </h1>
+            <p>Zavala County, located in the heart of South Texas, is a vibrant community known for its rich cultural
+                heritage, agricultural roots, and close-knit neighborhoods. Home to Crystal City, the “Spinach Capital
+                of
+                the World”, the county blends small-town charm with opportunities for growth and development.</p>
+
+            <p>Building a better future, together.</p>
+        </article>
+        <hr>
+
+        <!-- How county government works -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">How county government works</h2>
+            <div class="row g-4">
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">County Judge</h3>
+                        <p class="small mb-0">Presides over Commissioners Court and handles some judicial duties.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">County Clerk</h3>
+                        <p class="small mb-0">Keeps official records, from deeds to marriage licenses.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">County Court System</h3>
+                        <p class="small mb-0">How cases move through the county court system, from filing to resolution.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">The Sheriff's Office</h3>
+                        <p class="small mb-0">Enforces laws and maintains public safety within the county.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Voting and getting around -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">Voting and getting around</h2>
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/images/vote%20Counts.png" target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000609/vote Counts.png"
+                                alt="Infographic explaining how local elections work and why voter turnout matters at the county level">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Your vote counts</h3>
+                            <p class="small mb-0">Local elections decide who runs your courts, schools, and county
+                                offices. <a href="https://www.co.zavala.tx.us/upload/page/0042/images/vote%20Counts.png"
+                                    target="_blank">View
+                                    infographic</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/images/Transportation%20Infographic%20hires.jpg"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000610/Transportation Infographic hires.jpg"
+                                alt="Infographic showing the county's role in maintaining roads and transportation infrastructure">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Transportation</h3>
+                            <p class="small mb-0">The county maintains a large share of local roads and bridges.
+                                <a href="https://www.co.zavala.tx.us/upload/page/0042/images/Transportation%20Infographic%20hires.jpg"
+                                    target="_blank">View infographic</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- More resources (placeholders) -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">More resources</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/Indigent%20Defense%20Infographic.pdf"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000605/IndigentDefenseInfographic.png"
+                                alt="Indigent Defense infographic explaining how the county provides legal representation to residents who cannot afford an attorney">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Indigent defense</h3>
+                            <p class="small mb-0">The county provides a lawyer for residents facing criminal charges who
+                                cannot afford one.
+                                <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/Indigent%20Defense%20Infographic.pdf"
+                                    target="_blank">View infographic</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/images/Property%20Tax%20Bill.jpg"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000607/Property Tax Bill.jpg"
+                                alt="Infographic showing the parts of a property tax bill and how the amount owed is calculated">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Property tax bill, at a glance</h3>
+                            <p class="small mb-0">A breakdown of each line item on a property tax bill. <a
+                                    href="https://www.co.zavala.tx.us/upload/page/0042/images/Property%20Tax%20Bill.jpg"
+                                    target="_blank">View infographic</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/State%20Services%20at%20the%20Local%20Level%20Infographic.pdf"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000606/State Services.png"
+                                alt="State Services at the Local Level infographic showing how state and county services connect">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">What the county does for you</h3>
+                            <p class="small mb-0">A quick-reference list of services the county provides.
+                                <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/State%20Services%20at%20the%20Local%20Level%20Infographic.pdf"
+                                    target="_blank">View infographic</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <p class="fs-5 mt-4">Have a question, or need to request a record? <a href="contact.html">Contact us</a>.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="footer-inner">
+
+                <div class="footer-columns">
+
+                    <div class="forms">
+                        <h3>Frequently Used Forms & Toolkit</h3>
+                        <button class="report-btn" onclick="window.location.href='contact.html'">Report a Website
+                            Issue</button>
+                    </div>
+
+                    <div>
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="about.html">About Zavala County</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>County Information</h4>
+                        <ul>
+                            <li><a href="directory.html">County Directory</a></li>
+                            <li><a href="alltopics.html">All Topics and Services</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-inner">
+                <h5>Zavala County Courthouse</h5>
+                <p>200 E. Uvalde Street</p>
+                <p>Crystal City, Texas 78839</p>
+                <p>Phone: 830-374-3810</p>
+            </div>
+        </div>
+        <button id="backToTop" onclick="scrollToTop()">↑ Top</button>
+        <div class="footer-bottom">
+            <div class="footer-inner">
+                <p>Copyright © Zavala County, Texas 2026. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts/search.js" defer></script>
+</body>
+
+</html>

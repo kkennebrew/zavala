@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Inicio",
+        "url": "index-es.html",
+        "keywords": "inicio página principal bienvenida impulsando zavala hacia adelante misión",
+        "excerpt": "El sitio web del Condado de Zavala le ayuda a encontrar departamentos, formularios, información judicial y programas del condado."
+    },
+    {
+        "title": "Temas y Servicios",
+        "url": "alltopics-es.html",
+        "keywords": "temas servicios departamentos programas recursos agendas comisionados elecciones resultados presupuesto tasa de impuestos prohibición de quemas ejecuciones hipotecarias propuestas rfp depósito reclusos cárcel multas citaciones agricultura salud propiedad valuación días festivos",
+        "excerpt": "Encuentre información sobre departamentos, programas y recursos disponibles para los residentes del Condado de Zavala."
+    },
+    {
+        "title": "Directorio del Condado",
+        "url": "directory-es.html",
+        "keywords": "directorio empleados personal departamentos números de teléfono contactos funcionarios del condado nombres puestos",
+        "excerpt": "Consulte números de teléfono y contactos de los departamentos y personal del Condado de Zavala."
+    },
+    {
+        "title": "Contáctenos",
+        "url": "contact-es.html",
+        "keywords": "contacto teléfono correo electrónico oficina principal registros licencia de matrimonio acta de nacimiento acta de defunción servicios públicos factura de agua basura vertedero recolección solicitud de información pública registros abiertos juez secretario del condado reportar un problema",
+        "excerpt": "Comuníquese con la Oficina Principal, la Oficina de Registros, la Oficina de Servicios Públicos, o envíe una Solicitud de Información Pública."
+    },
+    {
+        "title": "Acerca de Nosotros",
+        "url": "about-es.html",
+        "keywords": "acerca de juez del condado secretario sistema de cortes sheriff votación elecciones voto transporte carreteras puentes defensa para personas de bajos recursos abogado impuesto predial gobierno cómo funciona",
+        "excerpt": "Conozca cómo funciona el gobierno del condado, y cómo votar, transportarse y acceder a los recursos del condado."
+    },
+    {
+        "title": "Programa de Atención Médica para Indigentes",
+        "url": "health-es.html",
+        "keywords": "atención médica programa para indigentes medicaid detección de cáncer mamografía atención primaria atención especializada hospital internados ambulatorios sala de emergencias bajos ingresos sin seguro asistencia médica clínica gratuita",
+        "excerpt": "Asistencia médica para residentes elegibles que no califican para Medicaid ni cuentan con otra cobertura."
+    }
+]

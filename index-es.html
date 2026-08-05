@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Información del Condado de Zavala">
+    <meta name="keywords" content="Condado de Zavala, Secretario, Distrito">
+    <meta name="author" content="Kalah Kennebrew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web del Condado de Zavala</title>
+    <link rel="alternate" hreflang="en" href="index.html">
+    <link rel="alternate" hreflang="es" href="index-es.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="zavala.css">
+    <script src="scripts/contacts.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+        <div class="top-bar">
+            <a href="index-es.html" class="logo-link">
+                <img src="assets/logo.png" alt="Página de inicio del Condado de Zavala" class="logo">
+            </a>
+
+            <div class="header-utilities">
+
+                <a href="index.html" class="language-link" lang="en">
+                    In English
+                </a>
+
+                <div class="search-group">
+                    <label for="search" class="visually-hidden">Buscar en el sitio web</label>
+                    <input type="text" id="search" name="search" class="search-input"
+                        placeholder="Buscar en el sitio web" autocomplete="off">
+
+                    <button type="button" aria-label="Buscar">
+                        <img src="assets/search.png" class="search-icon" alt="">
+                    </button>
+
+                    <div id="search-status" class="visually-hidden" aria-live="polite"></div>
+                    <ul id="search-results" class="search-results" hidden></ul>
+                </div>
+
+            </div>
+
+        </div>
+        <nav aria-label="Navegación principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+                <span class="nav-toggle-icon">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </span>
+                <span class="nav-toggle-label">Menú</span>
+            </button>
+
+            <ul id="primary-nav">
+                <li><a href="index-es.html" class="nav-link active">Inicio</a></li>
+                <li><a href="alltopics-es.html" class="nav-link">Temas y Servicios</a></li>
+                <li><a href="directory-es.html" class="nav-link">Directorio del Condado</a></li>
+                <li><a href="contact-es.html" class="nav-link">Contáctenos</a></li>
+                <li><a href="about-es.html" class="nav-link">Acerca de Nosotros</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero" role="img" aria-label="Palacio de Justicia del Condado de Zavala">
+            <img src="assets/home.jpg" alt="Edificio del Palacio de Justicia del Condado de Zavala en Crystal City"
+                class="hero-img">
+        </div>
+
+    </header>
+
+    <main id="main-content">
+        <article>
+            <h1>Impulsando a Zavala Hacia Adelante</h1>
+            <p> Nuestra misión es mejorar la calidad de vida de todos los residentes del Condado de Zavala. Entendemos
+                a nuestra comunidad, quiénes son, qué les importa y el futuro que están construyendo. Cada día,
+                trabajamos para elevar el nivel de nuestros servicios, porque creemos que las altas expectativas
+                crean oportunidades, no obstáculos. A través de nuestro compromiso compartido, resiliencia y
+                diversidad, trabajamos juntos para lograr las aspiraciones de cada residente.</p>
+        </article>
+        <hr>
+        <section class="mission-section">
+            <div class="mission-container">
+                <div class="mission-text">
+                    <h2>Facilitando el acceso a los servicios del condado</h2>
+
+                    <p>
+                        El sitio web del Condado de Zavala le ayuda a encontrar departamentos, formularios,
+                        información judicial y programas del condado.
+                    </p>
+
+                    <a href="about-es.html" class="mission-btn">Acerca de Nosotros</a>
+                </div>
+
+                <!-- IMAGE (Little accessbile picture) -->
+                <div class="mission-image">
+                    <img src="assets/accessible.jpg" alt="Botón de teclado de accesibilidad">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="quicklinks">
+
+            <div id="quicklinks">
+                <h2>Enlaces Rápidos</h2>
+            </div>
+
+            <div class="quicklinks-scroll">
+
+                <div class="scroll-container">
+                    <div class="scroll-track">
+
+                        <!-- CARD 3 -->
+                        <a href="https://zavalacad.com/adopted-tax-rates/">
+                            <div class="card">
+                                <h3>Presupuesto y Tasa de Impuestos</h3>
+                                <img src="assets/tax.jpg"
+                                    alt="Ícono de información sobre el presupuesto e impuestos del condado">
+                                <p>Consulte los planes financieros y las tasas de impuestos actuales.</p>
+                            </div>
+                        </a>
+
+                        <!-- CARD 7 -->
+                        <a href="https://deposits.jailatm.com/WebDeposits/">
+                            <div class="card">
+                                <h3>Depósito en Línea para Reclusos de la Oficina del Sheriff</h3>
+                                <img src="assets/inmate.jpg" alt="Ícono de depósito para reclusos">
+                                <p>Realice depósitos seguros en línea a las cuentas de los reclusos de forma rápida y
+                                    sencilla.</p>
+                            </div>
+                        </a>
+
+                        <!-- CARD 8 -->
+                        <a href="https://billpay.forte.net/">
+                            <div class="card">
+                                <h3>Pagar Multas y Citaciones</h3>
+                                <img src="assets/tickets.jpg" alt="Ícono de multas">
+                                <p>Pague multas de tránsito y citaciones en línea de forma cómoda y segura.</p>
+                            </div>
+                        </a>
+
+                        <!-- CARD 9 -->
+                        <a href="https://agrilifeextension.tamu.edu/counties/zavala-county/">
+                            <div class="card">
+                                <h3>Texas A&amp;M AgriLife</h3>
+                                <img src="assets/agri.jpg" alt="Ícono de agricultura">
+                                <p>Encuentre programas educativos y recursos para la agricultura y el desarrollo
+                                    comunitario.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- CARD 10 -->
+                        <a href="health-es.html">
+                            <div class="card">
+                                <h3>Programa de Atención Médica para Indigentes</h3>
+                                <img src="assets/health.jpg" alt="Ícono de salud">
+                                <p>Conozca la asistencia médica disponible para los residentes elegibles.</p>
+                            </div>
+                        </a>
+
+                        <!-- CARD 11 -->
+                        <a href="https://zavalacad.com/">
+                            <div class="card">
+                                <h3>Distrito Central de Valuación de Zavala</h3>
+                                <img src="assets/property.png" alt="Ícono de propiedad">
+                                <p>Use los servicios en línea para pagos, permisos y trámites del condado.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- ARROWS -->
+                <button onclick="scrollCarousel(-1)" class="scroll-btn prev">❮</button>
+                <button onclick="scrollCarousel(1)" class="scroll-btn next">❯</button>
+
+            </div>
+        </section>
+
+        <section class="news-highlights animate-section">
+            <h2>Últimas Noticias</h2>
+
+            <div class="news-row">
+
+                <article class="news-card">
+                    <img src="assets/burn-ban.jpg" alt="Anuncio de prohibición de quemas">
+                    <div class="card-content">
+                        <h3>Prohibición de Quemas</h3>
+                        <p>Se prohíbe toda quema al aire libre en el Condado de Zavala del 8 de julio de 2026 al 6 de
+                            octubre de 2026, según una orden emitida por la Corte de Comisionados del Condado de
+                            Zavala.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/groundbreaking.png"
+                        alt="Funcionarios del condado en un evento de inicio de construcción">
+                    <div class="card-content">
+                        <h3>Nuevos Desarrollos e Inversiones en Todo el Condado</h3>
+                        <p>Nuevo edificio de usos múltiples, almacén de mantenimiento del Sheriff, centros de
+                            nutrición, y camiones y equipo de emergencia.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/subdivision.jpg" alt="Desarrollo de subdivisión residencial">
+                    <div class="card-content">
+                        <h3>Reglamento de Subdivisiones</h3>
+                        <p>El Condado de Zavala adoptó nuevas normas en abril de 2026 para guiar un crecimiento
+                            seguro y organizado en las áreas fuera de los límites de la ciudad.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/precinct.jpg" alt="Proyectos de mejora de precintos">
+                    <div class="card-content">
+                        <h3>Proyectos de Mejora de Precintos</h3>
+                        <p>El Condado de Zavala avanza proyectos en los cuatro precintos, incluyendo alumbrado
+                            público, mejoras en parques, mejoras en instalaciones, equipo de mantenimiento vial y
+                            mejoras de infraestructura en La Pryor.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/bank.jpg" alt="Alcancía que representa el alivio fiscal">
+                    <div class="card-content">
+                        <h3>Políticas e Iniciativas Estratégicas</h3>
+                        <p>Alivio fiscal para empresas con el fin de apoyar el crecimiento y atraer negocios.
+                            Financiamiento de subvenciones para colonias en Chula Vista, Batesville, Hacienda y La
+                            Pryor, enfocado en necesidades de agua, alcantarillado y precintos.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/txt.jpg" alt="Mujer usando un teléfono móvil para recibir alertas de texto">
+                    <div class="card-content">
+                        <h3>Alertas de Texto Electorales de TextMyGov Disponibles</h3>
+                        <p>Manténgase informado sobre las Elecciones del Condado de Zavala a través de TextMyGov.
+                            Envíe un mensaje de texto con “Zavala Co Elections” al 80946 para recibir actualizaciones,
+                            notificaciones e información importante directamente en su teléfono.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="footer-inner">
+
+                <div class="footer-columns">
+
+                    <div class="forms">
+                        <h3>Formularios y Recursos de Uso Frecuente</h3>
+                        <button class="report-btn" onclick="window.location.href='contact-es.html'">Reportar un
+                            Problema con el Sitio Web</button>
+                    </div>
+
+                    <div>
+                        <h4>Acerca de Nosotros</h4>
+                        <ul>
+                            <li><a href="about-es.html">Acerca del Condado de Zavala</a></li>
+                            <li><a href="contact-es.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Información del Condado</h4>
+                        <ul>
+                            <li><a href="directory-es.html">Directorio del Condado</a></li>
+                            <li><a href="alltopics-es.html">Todos los Temas y Servicios</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-inner">
+                <h5>Palacio de Justicia del Condado de Zavala</h5>
+                <p>200 E. Uvalde Street</p>
+                <p>Crystal City, Texas 78839</p>
+                <p>Teléfono: 830-374-3810</p>
+            </div>
+        </div>
+        <button id="backToTop" onclick="scrollToTop()">↑ Arriba</button>
+        <div class="footer-bottom">
+            <div class="footer-inner">
+                <p>Derechos de autor © Condado de Zavala, Texas 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts/search.js" defer></script>
+</body>
+
+</html>

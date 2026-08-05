@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lo que hace el condado, y cómo funciona, en lenguaje sencillo.">
+    <meta name="keywords" content="Condado de Zavala, Acerca de, Gobierno, Servicios, Juez, Secretario, Sheriff">
+    <meta name="author" content="Kalah Kennebrew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Acerca de Nosotros del Condado de Zavala</title>
+    <link rel="alternate" hreflang="en" href="about.html">
+    <link rel="alternate" hreflang="es" href="about-es.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="zavala.css">
+    <script src="scripts/contacts.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+        <div class="top-bar">
+            <a href="index-es.html" class="logo-link">
+                <img src="assets/logo.png" alt="Página de inicio del Condado de Zavala" class="logo">
+            </a>
+
+            <div class="header-utilities">
+
+                <a href="about.html" class="language-link" lang="en">
+                    In English
+                </a>
+
+                <div class="search-group">
+                    <label for="search" class="visually-hidden">Buscar en el sitio web</label>
+                    <input type="text" id="search" name="search" class="search-input"
+                        placeholder="Buscar en el sitio web" autocomplete="off">
+
+                    <button type="button" aria-label="Buscar">
+                        <img src="assets/search.png" class="search-icon" alt="">
+                    </button>
+
+                    <div id="search-status" class="visually-hidden" aria-live="polite"></div>
+                    <ul id="search-results" class="search-results" hidden></ul>
+                </div>
+
+            </div>
+
+        </div>
+        <nav aria-label="Navegación principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+                <span class="nav-toggle-icon">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </span>
+                <span class="nav-toggle-label">Menú</span>
+            </button>
+
+            <ul id="primary-nav">
+                <li><a href="index-es.html" class="nav-link">Inicio</a></li>
+                <li><a href="alltopics-es.html" class="nav-link">Temas y Servicios</a></li>
+                <li><a href="directory-es.html" class="nav-link">Directorio del Condado</a></li>
+                <li><a href="contact-es.html" class="nav-link">Contáctenos</a></li>
+                <li><a href="about-es.html" class="nav-link active">Acerca de Nosotros</a></li>
+            </ul>
+        </nav>
+        <section class="latinfellowship-banner">
+            <img src="assets/latinwomen.jpg" alt="Un grupo de mujeres latinas de pie juntas">
+        </section>
+    </header>
+
+    <main id="main-content" class="container my-5" style="max-width: 900px;">
+        <article>
+            <h1>Acerca del Condado de Zavala, Texas</h1>
+            <p>El Condado de Zavala, ubicado en el corazón del sur de Texas, es una comunidad vibrante conocida por
+                su rica herencia cultural, sus raíces agrícolas y sus vecindarios unidos. Hogar de Crystal City, la
+                “Capital Mundial de la Espinaca”, el condado combina el encanto de un pueblo pequeño con
+                oportunidades de crecimiento y desarrollo.</p>
+
+            <p>Construyendo un mejor futuro, juntos.</p>
+        </article>
+        <hr>
+
+        <!-- Cómo funciona el gobierno del condado -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">Cómo funciona el gobierno del condado</h2>
+            <div class="row g-4">
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">Juez del Condado</h3>
+                        <p class="small mb-0">Preside la Corte de Comisionados y atiende algunas funciones
+                            judiciales.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">Secretario del Condado</h3>
+                        <p class="small mb-0">Mantiene registros oficiales, desde escrituras hasta licencias de
+                            matrimonio.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">Sistema de Cortes del Condado</h3>
+                        <p class="small mb-0">Cómo se tramitan los casos en el sistema de cortes del condado, desde
+                            la presentación hasta la resolución.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h3 class="h6">La Oficina del Sheriff</h3>
+                        <p class="small mb-0">Aplica las leyes y mantiene la seguridad pública dentro del condado.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Votación y transporte -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">Votación y transporte</h2>
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/images/vote%20Counts.png" target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000609/vote Counts.png"
+                                alt="Infografía que explica cómo funcionan las elecciones locales y por qué importa la participación electoral a nivel del condado">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Su voto cuenta</h3>
+                            <p class="small mb-0">Las elecciones locales deciden quién dirige sus cortes, escuelas y
+                                oficinas del condado. <a
+                                    href="https://www.co.zavala.tx.us/upload/page/0042/images/vote%20Counts.png"
+                                    target="_blank">Ver infografía</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/images/Transportation%20Infographic%20hires.jpg"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000610/Transportation Infographic hires.jpg"
+                                alt="Infografía que muestra el papel del condado en el mantenimiento de carreteras e infraestructura de transporte">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Transporte</h3>
+                            <p class="small mb-0">El condado mantiene una gran parte de las carreteras y puentes
+                                locales. <a
+                                    href="https://www.co.zavala.tx.us/upload/page/0042/images/Transportation%20Infographic%20hires.jpg"
+                                    target="_blank">Ver infografía</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Más recursos (marcadores de posición) -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">Más recursos</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/Indigent%20Defense%20Infographic.pdf"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000605/IndigentDefenseInfographic.png"
+                                alt="Infografía de defensa para personas de bajos recursos que explica cómo el condado ofrece representación legal a residentes que no pueden pagar un abogado">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Defensa para personas de bajos recursos</h3>
+                            <p class="small mb-0">El condado proporciona un abogado a los residentes que enfrentan
+                                cargos penales y no pueden pagar uno.
+                                <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/Indigent%20Defense%20Infographic.pdf"
+                                    target="_blank">Ver infografía</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/images/Property%20Tax%20Bill.jpg"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000607/Property Tax Bill.jpg"
+                                alt="Infografía que muestra las partes de una factura de impuesto predial y cómo se calcula el monto adeudado">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Factura del impuesto predial, de un vistazo</h3>
+                            <p class="small mb-0">Un desglose de cada partida en una factura del impuesto predial.
+                                <a href="https://www.co.zavala.tx.us/upload/page/0042/images/Property%20Tax%20Bill.jpg"
+                                    target="_blank">Ver infografía</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card infographic-thumb p-0">
+                        <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/State%20Services%20at%20the%20Local%20Level%20Infographic.pdf"
+                            target="_blank">
+                            <img src="https://www.co.zavala.tx.us/upload/page/0042/widgets/image/000606/State Services.png"
+                                alt="Infografía de servicios estatales a nivel local que muestra cómo se conectan los servicios estatales y del condado">
+                        </a>
+                        <div class="p-3">
+                            <h3 class="h6">Servicios del condado</h3>
+                            <p class="small mb-0">Un vistazo a cómo se conectan los servicios estatales y del condado
+                                a nivel local.
+                                <a href="https://www.co.zavala.tx.us/upload/page/0042/docs/State%20Services%20at%20the%20Local%20Level%20Infographic.pdf"
+                                    target="_blank">Ver infografía</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <p class="fs-5 mt-4">Tiene una pregunta o necesita solicitar un registro? <a
+                    href="contact-es.html">Contáctenos</a>.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="footer-inner">
+
+                <div class="footer-columns">
+
+                    <div class="forms">
+                        <h3>Formularios y Recursos de Uso Frecuente</h3>
+                        <button class="report-btn" onclick="window.location.href='contact-es.html'">Reportar un
+                            Problema con el Sitio Web</button>
+                    </div>
+
+                    <div>
+                        <h4>Acerca de Nosotros</h4>
+                        <ul>
+                            <li><a href="about-es.html">Acerca del Condado de Zavala</a></li>
+                            <li><a href="contact-es.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Información del Condado</h4>
+                        <ul>
+                            <li><a href="directory-es.html">Directorio del Condado</a></li>
+                            <li><a href="alltopics-es.html">Todos los Temas y Servicios</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-inner">
+                <h5>Palacio de Justicia del Condado de Zavala</h5>
+                <p>200 E. Uvalde Street</p>
+                <p>Crystal City, Texas 78839</p>
+                <p>Teléfono: 830-374-3810</p>
+            </div>
+        </div>
+        <button id="backToTop" onclick="scrollToTop()">↑ Arriba</button>
+        <div class="footer-bottom">
+            <div class="footer-inner">
+                <p>Derechos de autor © Condado de Zavala, Texas 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts/search.js" defer></script>
+</body>
+
+</html>
