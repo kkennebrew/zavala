@@ -961,6 +961,7 @@ article {
     object-position: center center;
 }
 
+/*--------All Topics Page--------*/
 .quicklinks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1123,4 +1124,292 @@ body {
     color: #777;
     text-align: center;
     padding: 1rem;
+}
+
+/* ACCESSIBILITY TOOLBAR — controls, contrast, dark mode, underline */
+
+.a11y-toolbar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-family: inherit;
+}
+
+.a11y-toggle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #2a4a6a;
+    color: #ffffff;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.a11y-toggle:hover,
+.a11y-toggle:focus-visible {
+    background-color: #1a3a5c;
+    outline: 3px solid #4a7aaa;
+    outline-offset: 2px;
+}
+
+.a11y-panel {
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    width: 230px;
+    background: #ffffff;
+    border: 1px solid #c8d5e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.a11y-panel button {
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid #c8d5e0;
+    border-radius: 4px;
+    background: #f5f7fa;
+    color: #2a4a6a;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.a11y-panel button:hover,
+.a11y-panel button:focus-visible {
+    background: #eef3f8;
+    outline: 2px solid #2a4a6a;
+    outline-offset: 1px;
+}
+
+.a11y-font-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.a11y-font-controls button {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .a11y-toolbar {
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .a11y-panel {
+        width: 200px;
+    }
+}
+
+/* ---------- UNDERLINE LINKS ---------- */
+
+html.a11y-underline a {
+    text-decoration: underline !important;
+}
+
+/* ---------- HIGH CONTRAST MODE ---------- */
+
+html.a11y-contrast body {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Broad text-color override. The base site sets brand-navy text color on
+   many individual components (cards, banners, info boxes) rather than
+   getting from body, so each one needs to be forced here */
+html.a11y-contrast h1,
+html.a11y-contrast h2,
+html.a11y-contrast h3,
+html.a11y-contrast h4,
+html.a11y-contrast h5,
+html.a11y-contrast h6,
+html.a11y-contrast p,
+html.a11y-contrast li,
+html.a11y-contrast span,
+html.a11y-contrast label,
+html.a11y-contrast strong,
+html.a11y-contrast td,
+html.a11y-contrast th {
+    color: #ffffff !important;
+}
+
+html.a11y-contrast a,
+html.a11y-contrast .nav-link {
+    color: #ffff00 !important;
+}
+
+html.a11y-contrast .card,
+html.a11y-contrast .info-card,
+html.a11y-contrast .tab-content,
+html.a11y-contrast .accordion-item,
+html.a11y-contrast .search-results,
+html.a11y-contrast .news-card {
+    background: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+html.a11y-contrast header,
+html.a11y-contrast .top-bar,
+html.a11y-contrast nav {
+    background-color: #000000 !important;
+}
+
+html.a11y-contrast .footer-top,
+html.a11y-contrast .footer-middle,
+html.a11y-contrast .footer-bottom {
+    background: #000000 !important;
+}
+
+html.a11y-contrast .footer-columns a {
+    color: #ffff00 !important;
+    border-bottom-color: #ffff00 !important;
+}
+
+html.a11y-contrast .scroll-container::after {
+    background: linear-gradient(to left, #000000, transparent) !important;
+}
+
+/* Bootstrap's accordion (directory page) sets its own background/text
+   color and a built-in icon neither gets from the page. */
+html.a11y-contrast .accordion-button {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+html.a11y-contrast .accordion-button::after {
+    filter: invert(1);
+}
+
+/* The active tab additionally sets its own white background independent of
+   text color, so it needs a background override on top of the text fix. */
+html.a11y-contrast #contactTabs .nav-link.active {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border-color: #ffffff !important;
+}
+
+/* ---------- DARK MODE ---------- */
+
+html.a11y-dark body {
+    background: #1b1f24;
+    color: #e8e8e8;
+}
+
+html.a11y-dark h1,
+html.a11y-dark h2,
+html.a11y-dark h3,
+html.a11y-dark h4,
+html.a11y-dark h5,
+html.a11y-dark h6,
+html.a11y-dark p,
+html.a11y-dark li,
+html.a11y-dark span,
+html.a11y-dark label,
+html.a11y-dark strong,
+html.a11y-dark td,
+html.a11y-dark th {
+    color: #e8e8e8 !important;
+}
+
+html.a11y-dark a {
+    color: #8ab4d8;
+}
+
+html.a11y-dark .nav-link {
+    color: #cfe0f0 !important;
+}
+
+html.a11y-dark .card,
+html.a11y-dark .info-card,
+html.a11y-dark .tab-content,
+html.a11y-dark .accordion-item,
+html.a11y-dark .search-results,
+html.a11y-dark .news-card {
+    background: #262b32 !important;
+    border-color: #3a4048 !important;
+}
+
+/* Buttons that carry their own brand background (e.g. the teal "About Us"
+   button) need their white text pinned */
+html.a11y-dark .mission-btn,
+html.a11y-contrast .mission-btn {
+    color: #ffffff !important;
+}
+
+html.a11y-dark .news-card a {
+    color: #7fc4c4 !important;
+}
+
+html.a11y-dark header,
+html.a11y-dark .top-bar,
+html.a11y-dark nav {
+    background-color: #1b1f24 !important;
+}
+
+html.a11y-dark .footer-top,
+html.a11y-dark .footer-middle,
+html.a11y-dark .footer-bottom {
+    background: #1b1f24 !important;
+}
+
+html.a11y-dark .footer-columns a {
+    color: #cfe0f0 !important;
+    border-bottom-color: #cfe0f0 !important;
+}
+
+html.a11y-dark .scroll-container::after {
+    background: linear-gradient(to left, #1b1f24, transparent) !important;
+}
+
+html.a11y-dark .accordion-button {
+    background-color: #262b32 !important;
+    color: #e8e8e8 !important;
+    border-color: #3a4048 !important;
+}
+
+html.a11y-dark .accordion-button::after {
+    filter: invert(1);
+}
+
+html.a11y-dark #contactTabs .nav-link.active {
+    background-color: #262b32 !important;
+    color: #cfe0f0 !important;
+    border-color: #3a4048 !important;
+}
+
+/* Mobile hamburger dropdown (nav ul) sets its own white background, needs its own
+   override, same as header/footer/tab did. */
+html.a11y-contrast #primary-nav {
+    background-color: #000000 !important;
+    border-top-color: #ffffff !important;
+}
+
+html.a11y-contrast .nav-link {
+    border-bottom-color: #333333 !important;
+}
+
+html.a11y-contrast .nav-link.active {
+    background-color: #1a1a1a !important;
+}
+
+html.a11y-dark #primary-nav {
+    background-color: #1b1f24 !important;
+    border-top-color: #3a4048 !important;
+}
+
+html.a11y-dark .nav-link {
+    border-bottom-color: #3a4048 !important;
+}
+
+html.a11y-dark .nav-link.active {
+    background-color: #262b32 !important;
 }
