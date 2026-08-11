@@ -1,11 +1,13 @@
-// Site search: loads a small JSON index once, then matches locally.
-// No network request per keystroke — built for low-connectivity users.
-// Reads the page's lang attribute so an English page searches English
-// pages, and a Spanish page searches Spanish pages.
+// Header search: live dropdown as-you-type, plus Enter/button running the
+// same search immediately. Self-contained — no dependency on a separate
+// core module. Detects page language and merges live directory data
+// (contacts.js) into the searchable index when present on the page.
 
 (function () {
     const isSpanish = document.documentElement.lang === "es";
     const INDEX_URL = isSpanish ? "data/search-index-es.json" : "data/search-index.json";
+    const directoryUrl = isSpanish ? "directory-es.html" : "directory.html";
+
     const NO_RESULTS_TEXT = isSpanish
         ? q => `No se encontraron resultados para "${q}". Intente con otra palabra.`
         : q => `No results for "${q}". Try a different word.`;
@@ -25,13 +27,8 @@
     let index = null;
     let debounceTimer = null;
 
-    // If contacts.js has loaded on this page, turn each department into a
-    // searchable entry — department name plus every staff member's name —
-    // linking to the directory page with a hash that auto-expands it.
     function buildDirectoryEntries() {
         if (typeof directoryData === "undefined") return [];
-
-        const directoryUrl = isSpanish ? "directory-es.html" : "directory.html";
 
         return directoryData.map(dept => {
             const slug = dept.department
@@ -62,7 +59,6 @@
         return index;
     }
 
-    // Typo-tolerant match across title, keywords, and excerpt.
     function score(entry, query) {
         const q = query.toLowerCase().trim();
         if (!q) return 0;
@@ -136,14 +132,9 @@
 
     input.addEventListener("input", () => {
         clearTimeout(debounceTimer);
-        const query = input.value;
-        debounceTimer = setTimeout(async () => {
-            await loadIndex();
-            renderResults(search(query), query);
-        }, 200);
+        debounceTimer = setTimeout(runSearch, 200);
     });
 
-    // Enter key runs the search immediately, skipping the debounce.
     input.addEventListener("keydown", e => {
         if (e.key === "Enter") {
             e.preventDefault();
@@ -152,7 +143,6 @@
         }
     });
 
-    // The button runs the search immediately too.
     const searchButton = input.closest(".search-group")?.querySelector("button");
     if (searchButton) {
         searchButton.addEventListener("click", e => {
@@ -160,6 +150,8 @@
             clearTimeout(debounceTimer);
             runSearch();
         });
+    } else {
+        console.warn("Search button not found inside .search-group — check markup.");
     }
 
     if ("requestIdleCallback" in window) {

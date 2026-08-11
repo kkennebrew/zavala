@@ -93,39 +93,9 @@ header {
 }
 
 .search-group {
-    display: flex;
-    width: 450px;
     position: relative;
     /* anchors the results dropdown */
-}
-
-.search-group input {
-    flex: 1;
-    height: 40px;
-    padding: 0 14px;
-    border: 1px solid #c8d5e0;
-    border-radius: 4px 0 0 4px;
-    font-size: 18px;
-}
-
-.search-group input:focus {
-    outline: 3px solid #2e86ab;
-    outline-offset: 1px;
-}
-
-.search-group button {
-    width: 48px;
-    height: 40px;
-    background-color: #41b6e6;
-    border: 1px solid #c8d5e0;
-    border-radius: 0 4px 4px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-group button:hover {
-    background-color: #2e86ab;
+    max-width: 450px;
 }
 
 .search-icon {
@@ -1126,26 +1096,35 @@ body {
     padding: 1rem;
 }
 
-/* ACCESSIBILITY TOOLBAR — controls, contrast, dark mode, underline */
 
-.a11y-toolbar {
+/* ================================================================
+ACCESSIBILITY TOOLBAR
+================================================================ */
+
+.a11y-toolbar-inline {
     position: fixed;
     bottom: 20px;
     left: 20px;
     z-index: 1000;
     font-family: inherit;
+    display: inline-flex;
+    align-items: center;
 }
 
 .a11y-toggle {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 20px;
     background-color: #2a4a6a;
     color: #ffffff;
-    border: none;
-    font-size: 1.4rem;
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
 }
 
 .a11y-toggle:hover,
@@ -1155,9 +1134,32 @@ body {
     outline-offset: 2px;
 }
 
+.a11y-toggle-active {
+    border-color: #ffd166;
+}
+
+.a11y-status-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.a11y-status-badge.a11y-status-on {
+    background-color: #ffd166;
+    color: #1a3a5c;
+}
+
+.a11y-status-badge.a11y-status-off {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
 .a11y-panel {
     position: absolute;
-    bottom: 64px;
+    bottom: calc(100% + 8px);
     left: 0;
     width: 230px;
     background: #ffffff;
@@ -1168,9 +1170,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    z-index: 40;
 }
 
 .a11y-panel button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
     text-align: left;
     padding: 8px 10px;
     border: 1px solid #c8d5e0;
@@ -1188,6 +1195,32 @@ body {
     outline-offset: 1px;
 }
 
+.a11y-option-status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+}
+
+.a11y-option-status.a11y-status-on {
+    background-color: #2a4a6a;
+    color: #ffffff;
+}
+
+.a11y-option-status.a11y-status-off {
+    background-color: #d9d9d9;
+    color: #555555;
+}
+
+.a11y-panel button.a11y-option-on {
+    background: #e6f0f7;
+    border-color: #2a4a6a;
+    font-weight: 600;
+}
+
 .a11y-font-controls {
     display: flex;
     gap: 6px;
@@ -1198,8 +1231,19 @@ body {
     text-align: center;
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+    .a11y-toggle-text {
+        display: none;
+    }
+
+    .a11y-toggle {
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 480px) {
-    .a11y-toolbar {
+    .a11y-toolbar-inline {
         bottom: 12px;
         left: 12px;
     }
@@ -1208,6 +1252,7 @@ body {
         width: 200px;
     }
 }
+
 
 /* ---------- UNDERLINE LINKS ---------- */
 
@@ -1222,9 +1267,6 @@ html.a11y-contrast body {
     color: #ffffff !important;
 }
 
-/* Broad text-color override. The base site sets brand-navy text color on
-   many individual components (cards, banners, info boxes) rather than
-   getting from body, so each one needs to be forced here */
 html.a11y-contrast h1,
 html.a11y-contrast h2,
 html.a11y-contrast h3,
@@ -1277,8 +1319,7 @@ html.a11y-contrast .scroll-container::after {
     background: linear-gradient(to left, #000000, transparent) !important;
 }
 
-/* Bootstrap's accordion (directory page) sets its own background/text
-   color and a built-in icon neither gets from the page. */
+
 html.a11y-contrast .accordion-button {
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -1289,13 +1330,65 @@ html.a11y-contrast .accordion-button::after {
     filter: invert(1);
 }
 
-/* The active tab additionally sets its own white background independent of
-   text color, so it needs a background override on top of the text fix. */
+#a11y-panel {
+    background: #ffffff !important;
+}
+
+#a11y-panel button {
+    background: #f5f7fa !important;
+    color: #2a4a6a !important;
+    border-color: #c8d5e0 !important;
+}
+
+#a11y-panel button span {
+    color: inherit !important;
+}
+
+#a11y-panel button:hover,
+#a11y-panel button:focus-visible {
+    background: #eef3f8 !important;
+    color: #2a4a6a !important;
+    outline: 2px solid #2a4a6a;
+}
+
+#a11y-panel button.a11y-option-on {
+    background: #dbe9f5 !important;
+    color: #1a3a5c !important;
+    border-color: #2a4a6a !important;
+}
+
+#a11y-panel .a11y-option-status.a11y-status-on {
+    background: #2a4a6a !important;
+    color: #ffffff !important;
+}
+
+#a11y-panel .a11y-option-status.a11y-status-off {
+    background: #d9d9d9 !important;
+    color: #333333 !important;
+}
+
+html.a11y-contrast .a11y-panel {
+    background: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+html.a11y-contrast .a11y-panel button {
+    background: #1a1a1a !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+html.a11y-contrast .a11y-panel button.a11y-option-on {
+    background: #332f00 !important;
+    border-color: #ffff00 !important;
+}
+
 html.a11y-contrast #contactTabs .nav-link.active {
     background-color: #000000 !important;
     color: #ffff00 !important;
     border-color: #ffffff !important;
 }
+
 
 /* ---------- DARK MODE ---------- */
 
@@ -1338,8 +1431,7 @@ html.a11y-dark .news-card {
     border-color: #3a4048 !important;
 }
 
-/* Buttons that carry their own brand background (e.g. the teal "About Us"
-   button) need their white text pinned */
+
 html.a11y-dark .mission-btn,
 html.a11y-contrast .mission-btn {
     color: #ffffff !important;
@@ -1386,8 +1478,6 @@ html.a11y-dark #contactTabs .nav-link.active {
     border-color: #3a4048 !important;
 }
 
-/* Mobile hamburger dropdown (nav ul) sets its own white background, needs its own
-   override, same as header/footer/tab did. */
 html.a11y-contrast #primary-nav {
     background-color: #000000 !important;
     border-top-color: #ffffff !important;
@@ -1412,4 +1502,17 @@ html.a11y-dark .nav-link {
 
 html.a11y-dark .nav-link.active {
     background-color: #262b32 !important;
+}
+
+main,
+.quicklinks,
+.news-card,
+.animate-section,
+.indigent-content,
+.container.my-5,
+.mission-section,
+.news-highlights {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
 }

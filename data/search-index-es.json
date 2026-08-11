@@ -8,7 +8,7 @@
     {
         "title": "Temas y Servicios",
         "url": "alltopics-es.html",
-        "keywords": "temas servicios departamentos programas recursos agendas comisionados elecciones resultados presupuesto tasa de impuestos prohibición de quemas ejecuciones hipotecarias propuestas rfp depósito reclusos cárcel multas citaciones agricultura salud propiedad valuación días festivos",
+        "keywords": "temas servicios departamentos programas recursos todos",
         "excerpt": "Encuentre información sobre departamentos, programas y recursos disponibles para los residentes del Condado de Zavala."
     },
     {
@@ -34,5 +34,71 @@
         "url": "health-es.html",
         "keywords": "atención médica programa para indigentes medicaid detección de cáncer mamografía atención primaria atención especializada hospital internados ambulatorios sala de emergencias bajos ingresos sin seguro asistencia médica clínica gratuita",
         "excerpt": "Asistencia médica para residentes elegibles que no califican para Medicaid ni cuentan con otra cobertura."
+    },
+    {
+        "title": "Agendas de la Corte de Comisionados",
+        "url": "alltopics-es.html",
+        "keywords": "comisionados corte agendas reuniones gobierno decisiones",
+        "excerpt": "Consulte las agendas de las reuniones y participe en las decisiones locales."
+    },
+    {
+        "title": "Resultados Electorales 2026",
+        "url": "alltopics-es.html",
+        "keywords": "elecciones resultados votación boleta 2026",
+        "excerpt": "Consulte los últimos resultados y actualizaciones electorales del condado."
+    },
+    {
+        "title": "Presupuesto y Tasa de Impuestos",
+        "url": "https://zavalacad.com/adopted-tax-rates/",
+        "keywords": "presupuesto tasa de impuestos planes financieros impuesto predial",
+        "excerpt": "Consulte los planes financieros y las tasas de impuestos actuales."
+    },
+    {
+        "title": "Prohibición de Quemas",
+        "url": "alltopics-es.html",
+        "keywords": "prohibición de quemas fuego quema al aire libre seguridad normas no fuegos abiertos",
+        "excerpt": "Manténgase informado sobre las prohibiciones de quemas y las normas de seguridad."
+    },
+    {
+        "title": "Ejecuciones Hipotecarias",
+        "url": "alltopics-es.html",
+        "keywords": "ejecuciones hipotecarias listados avisos propiedad",
+        "excerpt": "Consulte los avisos y listados actuales de ejecuciones hipotecarias en el Condado de Zavala."
+    },
+    {
+        "title": "Solicitudes de Propuestas (RFP)",
+        "url": "alltopics-es.html",
+        "keywords": "rfp solicitudes de propuestas contratos proveedores trabajar con el condado",
+        "excerpt": "Explore las propuestas abiertas y oportunidades para trabajar con el condado."
+    },
+    {
+        "title": "Depósito en Línea para Reclusos de la Oficina del Sheriff",
+        "url": "https://deposits.jailatm.com/WebDeposits/",
+        "keywords": "depósito reclusos cárcel sheriff cuenta dinero",
+        "excerpt": "Realice depósitos seguros en línea a las cuentas de los reclusos de forma rápida y sencilla."
+    },
+    {
+        "title": "Pagar Multas y Citaciones",
+        "url": "https://billpay.forte.net/",
+        "keywords": "pagar multas citaciones tránsito en línea",
+        "excerpt": "Pague multas de tránsito y citaciones en línea de forma cómoda y segura."
+    },
+    {
+        "title": "Texas A&M AgriLife",
+        "url": "https://agrilifeextension.tamu.edu/counties/zavala-county/",
+        "keywords": "agricultura agrilife extensión educación programas desarrollo comunitario",
+        "excerpt": "Encuentre programas educativos y recursos para la agricultura y el desarrollo comunitario."
+    },
+    {
+        "title": "Distrito Central de Valuación de Zavala",
+        "url": "https://zavalacad.com/",
+        "keywords": "distrito de valuación propiedad pagos permisos trámites",
+        "excerpt": "Use los servicios en línea para pagos, permisos y trámites del condado."
+    },
+    {
+        "title": "Días Festivos del Condado de Zavala",
+        "url": "https://www.co.zavala.tx.us/upload/page/0001/doc00816420260331142653.pdf",
+        "keywords": "días festivos cierre de oficinas calendario horario",
+        "excerpt": "Consulte los días festivos oficiales y las fechas de cierre de oficinas del Condado de Zavala."
     }
 ]

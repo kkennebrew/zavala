@@ -1,3 +1,9 @@
+// Accessibility toolbar. Injects itself into the header's utility row
+// (next to the language link and search bar) rather than floating as a
+// separate fixed-position widget, so it reads as part of site navigation.
+// Preferences persist across pages via localStorage. Each option shows
+// its own On/Off state, not just the master toggle button.
+
 (function () {
     const STORAGE_KEY = "a11y-prefs";
     const defaults = { contrast: false, dark: false, fontStep: 0, underline: false };
@@ -23,6 +29,7 @@
     const t = isSpanish
         ? {
             label: "Herramientas de accesibilidad",
+            labelOn: "Herramientas de accesibilidad (activas)",
             read: "Leer la página en voz alta",
             stopRead: "Detener lectura",
             contrast: "Alto contraste",
@@ -30,10 +37,16 @@
             underline: "Subrayar enlaces",
             increase: "Aumentar tamaño del texto",
             decrease: "Reducir tamaño del texto",
-            reset: "Restablecer texto"
+            reset: "Restablecer texto",
+            toggleText: "Accesibilidad",
+            statusOn: "Activado",
+            statusOff: "Desactivado",
+            on: "On",
+            off: "Off"
         }
         : {
             label: "Accessibility tools",
+            labelOn: "Accessibility tools (settings active)",
             read: "Read page aloud",
             stopRead: "Stop reading",
             contrast: "High contrast",
@@ -41,12 +54,38 @@
             underline: "Underline links",
             increase: "Increase text size",
             decrease: "Decrease text size",
-            reset: "Reset text size"
+            reset: "Reset text size",
+            toggleText: "Accessibility",
+            statusOn: "On",
+            statusOff: "Off",
+            on: "On",
+            off: "Off"
         };
 
     let prefs = loadPrefs();
     let speaking = false;
     let readButton = null;
+    let toggleBtn = null;
+    let statusBadge = null;
+    let contrastBtn = null;
+    let darkBtn = null;
+    let underlineBtn = null;
+
+    function isAnyPrefActive() {
+        return prefs.contrast || prefs.dark || prefs.underline || prefs.fontStep !== 0;
+    }
+
+    function setOptionState(button, isOn) {
+        if (!button) return;
+        button.classList.toggle("a11y-option-on", isOn);
+        const badge = button.querySelector(".a11y-option-status");
+        if (badge) {
+            badge.textContent = isOn ? t.on : t.off;
+            badge.classList.toggle("a11y-status-on", isOn);
+            badge.classList.toggle("a11y-status-off", !isOn);
+        }
+        button.setAttribute("aria-pressed", String(isOn));
+    }
 
     function applyPrefs() {
         const html = document.documentElement;
@@ -54,6 +93,21 @@
         html.classList.toggle("a11y-dark", prefs.dark);
         html.classList.toggle("a11y-underline", prefs.underline);
         html.style.zoom = String(1 + prefs.fontStep * 0.1);
+
+        setOptionState(contrastBtn, prefs.contrast);
+        setOptionState(darkBtn, prefs.dark);
+        setOptionState(underlineBtn, prefs.underline);
+        updateToggleState();
+    }
+
+    function updateToggleState() {
+        if (!toggleBtn || !statusBadge) return;
+        const active = isAnyPrefActive();
+        toggleBtn.classList.toggle("a11y-toggle-active", active);
+        toggleBtn.setAttribute("aria-label", active ? t.labelOn : t.label);
+        statusBadge.textContent = active ? t.statusOn : t.statusOff;
+        statusBadge.classList.toggle("a11y-status-on", active);
+        statusBadge.classList.toggle("a11y-status-off", !active);
     }
 
     function updateReadButtonLabel() {
@@ -85,18 +139,39 @@
         updateReadButtonLabel();
     }
 
+    const ICON_SVG = `
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+      <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="7.2" r="1.8"/>
+      <path d="M6.3 10.2c1.9.7 3.8 1 5.7 1s3.8-.3 5.7-1v1.8c-1.3.4-2.6.7-4 .8v2.1l2.3 4.4-1.6.9-2.1-4.1h-1L9.2 20.2l-1.6-.9 2.3-4.4v-2.1c-1.4-.1-2.7-.4-4-.8v-1.8z"/>
+    </svg>
+  `;
+
     function buildToolbar() {
         const wrap = document.createElement("div");
-        wrap.className = "a11y-toolbar";
+        wrap.className = "a11y-toolbar-inline";
         wrap.innerHTML = `
       <button type="button" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="${t.label}">
-        <span aria-hidden="true">&#9881;</span>
+        ${ICON_SVG}
+        <span class="a11y-toggle-text">${t.toggleText}</span>
+        <span class="a11y-status-badge"></span>
       </button>
       <div id="a11y-panel" class="a11y-panel" hidden>
-        <button type="button" data-action="read">${t.read}</button>
-        <button type="button" data-action="contrast">${t.contrast}</button>
-        <button type="button" data-action="dark">${t.dark}</button>
-        <button type="button" data-action="underline">${t.underline}</button>
+        <button type="button" data-action="read">
+          <span>${t.read}</span>
+        </button>
+        <button type="button" data-action="contrast" aria-pressed="false">
+          <span>${t.contrast}</span>
+          <span class="a11y-option-status"></span>
+        </button>
+        <button type="button" data-action="dark" aria-pressed="false">
+          <span>${t.dark}</span>
+          <span class="a11y-option-status"></span>
+        </button>
+        <button type="button" data-action="underline" aria-pressed="false">
+          <span>${t.underline}</span>
+          <span class="a11y-option-status"></span>
+        </button>
         <div class="a11y-font-controls">
           <button type="button" data-action="decrease" aria-label="${t.decrease}">A&minus;</button>
           <button type="button" data-action="reset" aria-label="${t.reset}">Reset</button>
@@ -104,17 +179,28 @@
         </div>
       </div>
     `;
-        document.body.appendChild(wrap);
+
+        const headerUtilities = document.querySelector(".header-utilities");
+        if (headerUtilities) {
+            headerUtilities.appendChild(wrap);
+        } else {
+            wrap.classList.add("a11y-toolbar-fallback");
+            document.body.appendChild(wrap);
+        }
         return wrap;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        applyPrefs();
-
         const wrap = buildToolbar();
-        const toggleBtn = wrap.querySelector(".a11y-toggle");
+        toggleBtn = wrap.querySelector(".a11y-toggle");
+        statusBadge = wrap.querySelector(".a11y-status-badge");
         const panel = wrap.querySelector(".a11y-panel");
-        readButton = wrap.querySelector('[data-action="read"]');
+        readButton = wrap.querySelector('[data-action="read"] span');
+        contrastBtn = wrap.querySelector('[data-action="contrast"]');
+        darkBtn = wrap.querySelector('[data-action="dark"]');
+        underlineBtn = wrap.querySelector('[data-action="underline"]');
+
+        applyPrefs();
 
         toggleBtn.addEventListener("click", () => {
             const isHidden = panel.hasAttribute("hidden");

@@ -8,7 +8,7 @@
     {
         "title": "Topics and Services",
         "url": "alltopics.html",
-        "keywords": "topics services departments programs resources commissioners court agendas election results budget tax rate burn ban foreclosures rfp proposals inmate deposit jail tickets citations agriculture health property appraisal holidays",
+        "keywords": "topics services departments programs resources all",
         "excerpt": "Find information on departments, programs, and resources available to Zavala County residents."
     },
     {
@@ -34,5 +34,71 @@
         "url": "health.html",
         "keywords": "health care indigent program medicaid cancer screening mammogram primary care specialty care hospital inpatient outpatient emergency room low income no insurance medical assistance free clinic",
         "excerpt": "Health care assistance for eligible residents who are not eligible for Medicaid or other coverage."
+    },
+    {
+        "title": "Commissioners Court Agendas",
+        "url": "alltopics.html",
+        "keywords": "commissioners court agendas meetings government decisions",
+        "excerpt": "View meeting agendas and stay involved in local decisions."
+    },
+    {
+        "title": "2026 Election Results",
+        "url": "alltopics.html",
+        "keywords": "election results voting ballot 2026",
+        "excerpt": "Check the latest county election results and updates."
+    },
+    {
+        "title": "Budget and Tax Rate",
+        "url": "https://zavalacad.com/adopted-tax-rates/",
+        "keywords": "budget tax rate financial plans property tax",
+        "excerpt": "Explore financial plans and current tax rates."
+    },
+    {
+        "title": "Burn Ban",
+        "url": "alltopics.html",
+        "keywords": "burn ban fire outdoor burning safety regulations no open fires",
+        "excerpt": "Stay updated on burn bans and safety regulations."
+    },
+    {
+        "title": "Foreclosures",
+        "url": "alltopics.html",
+        "keywords": "foreclosures foreclosure listings notices property",
+        "excerpt": "View current foreclosure listings and notices within Zavala County."
+    },
+    {
+        "title": "Request for Proposals (RFPs)",
+        "url": "alltopics.html",
+        "keywords": "rfp request for proposals bids contracts vendors work with the county",
+        "excerpt": "Browse open proposals and opportunities to work with the county."
+    },
+    {
+        "title": "Sheriff's Office Inmate Online Deposit",
+        "url": "https://deposits.jailatm.com/WebDeposits/",
+        "keywords": "inmate deposit jail sheriff account money",
+        "excerpt": "Make secure online deposits to inmate accounts quickly and easily."
+    },
+    {
+        "title": "Pay Tickets and Citations",
+        "url": "https://billpay.forte.net/",
+        "keywords": "pay tickets citations traffic fines online",
+        "excerpt": "Pay traffic tickets and citations online conveniently and securely."
+    },
+    {
+        "title": "Texas A&M AgriLife",
+        "url": "https://agrilifeextension.tamu.edu/counties/zavala-county/",
+        "keywords": "agriculture agrilife extension farming education programs community development",
+        "excerpt": "Find educational programs and resources for agriculture and community development."
+    },
+    {
+        "title": "Zavala Central Appraisal District",
+        "url": "https://zavalacad.com/",
+        "keywords": "appraisal district property value payments permits transactions",
+        "excerpt": "Use online services for payments, permits, and county transactions."
+    },
+    {
+        "title": "Zavala County Holidays",
+        "url": "https://www.co.zavala.tx.us/upload/page/0001/doc00816420260331142653.pdf",
+        "keywords": "holidays office closures calendar schedule",
+        "excerpt": "View official holidays and office closure dates for Zavala County."
     }
 ]
