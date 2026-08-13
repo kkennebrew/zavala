@@ -1081,6 +1081,11 @@ body {
     padding: 1rem;
 }
 
+.info-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*-------- ACCESSIBILITY TOOLBAR --------*/
 
 .a11y-toolbar-inline {
