@@ -149,7 +149,7 @@
 
     function buildToolbar() {
         const wrap = document.createElement("div");
-        wrap.className = "a11y-toolbar-inline";
+        wrap.className = "a11y-toolbar-inline a11y-toolbar-fallback";
         wrap.innerHTML = `
       <button type="button" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="${t.label}">
         ${ICON_SVG}
@@ -180,13 +180,7 @@
       </div>
     `;
 
-        const headerUtilities = document.querySelector(".header-utilities");
-        if (headerUtilities) {
-            headerUtilities.appendChild(wrap);
-        } else {
-            wrap.classList.add("a11y-toolbar-fallback");
-            document.body.appendChild(wrap);
-        }
+        document.body.appendChild(wrap);
         return wrap;
     }
 

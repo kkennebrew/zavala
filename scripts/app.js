@@ -1,26 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const animatedElements = document.querySelectorAll(
-        "main, .quicklinks, .animate-section"
-    );
     const container = document.querySelector('.scroll-container');
     const prevBtn = document.querySelector('.scroll-btn.prev');
     const nextBtn = document.querySelector('.scroll-btn.next');
-
-    function isInView(element) {
-        const rect = element.getBoundingClientRect();
-        return rect.top < window.innerHeight - 100 && rect.bottom > 0;
-    }
-
-    function handleScroll() {
-        animatedElements.forEach(el => {
-            if (isInView(el)) {
-                el.classList.add("show");
-            } else {
-                el.classList.remove("show");
-            }
-        });
-    }
 
     function updateArrows() {
         if (!container) return;
@@ -44,9 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
             nextBtn.style.pointerEvents = "auto";
         }
     }
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
 
     if (container) {
         container.addEventListener("scroll", updateArrows);

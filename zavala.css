@@ -318,9 +318,6 @@ main {
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
 }
 
 main section {
@@ -364,9 +361,6 @@ article {
 
 .quicklinks {
     margin-top: 80px;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
 }
 
 .quicklinks.show {
@@ -665,12 +659,6 @@ article {
     transform: translateY(0);
 }
 
-.animate-section {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
-}
-
 .animate-section.show {
     opacity: 1;
     transform: translateY(0);
@@ -808,9 +796,6 @@ article {
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
 }
 
 .indigent-content.show {
@@ -1028,7 +1013,7 @@ article {
 
 .latinfellowship-banner img {
     width: 100%;
-    height: 175%;
+    height: 150%;
     object-fit: cover;
     object-position: center center;
 }
@@ -1096,17 +1081,10 @@ body {
     padding: 1rem;
 }
 
-
-/* ================================================================
-ACCESSIBILITY TOOLBAR
-================================================================ */
+/*-------- ACCESSIBILITY TOOLBAR --------*/
 
 .a11y-toolbar-inline {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    font-family: inherit;
+    position: relative;
     display: inline-flex;
     align-items: center;
 }
@@ -1125,6 +1103,7 @@ ACCESSIBILITY TOOLBAR
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .a11y-toggle:hover,
@@ -1133,6 +1112,7 @@ ACCESSIBILITY TOOLBAR
     outline: 3px solid #4a7aaa;
     outline-offset: 2px;
 }
+
 
 .a11y-toggle-active {
     border-color: #ffd166;
@@ -1170,7 +1150,7 @@ ACCESSIBILITY TOOLBAR
     display: flex;
     flex-direction: column;
     gap: 8px;
-    z-index: 40;
+    z-index: 1001;
 }
 
 .a11y-panel button {
@@ -1194,6 +1174,7 @@ ACCESSIBILITY TOOLBAR
     outline: 2px solid #2a4a6a;
     outline-offset: 1px;
 }
+
 
 .a11y-option-status {
     font-size: 0.7rem;
@@ -1231,7 +1212,13 @@ ACCESSIBILITY TOOLBAR
     text-align: center;
 }
 
-/* Mobile */
+.a11y-toolbar-fallback {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
 @media (max-width: 768px) {
     .a11y-toggle-text {
         display: none;
@@ -1243,7 +1230,7 @@ ACCESSIBILITY TOOLBAR
 }
 
 @media (max-width: 480px) {
-    .a11y-toolbar-inline {
+    .a11y-toolbar-fallback {
         bottom: 12px;
         left: 12px;
     }
@@ -1252,7 +1239,6 @@ ACCESSIBILITY TOOLBAR
         width: 200px;
     }
 }
-
 
 /* ---------- UNDERLINE LINKS ---------- */
 
@@ -1319,7 +1305,6 @@ html.a11y-contrast .scroll-container::after {
     background: linear-gradient(to left, #000000, transparent) !important;
 }
 
-
 html.a11y-contrast .accordion-button {
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -1367,6 +1352,7 @@ html.a11y-contrast .accordion-button::after {
     color: #333333 !important;
 }
 
+
 html.a11y-contrast .a11y-panel {
     background: #000000 !important;
     border-color: #ffffff !important;
@@ -1388,7 +1374,6 @@ html.a11y-contrast #contactTabs .nav-link.active {
     color: #ffff00 !important;
     border-color: #ffffff !important;
 }
-
 
 /* ---------- DARK MODE ---------- */
 
@@ -1478,6 +1463,7 @@ html.a11y-dark #contactTabs .nav-link.active {
     border-color: #3a4048 !important;
 }
 
+
 html.a11y-contrast #primary-nav {
     background-color: #000000 !important;
     border-top-color: #ffffff !important;
@@ -1504,15 +1490,74 @@ html.a11y-dark .nav-link.active {
     background-color: #262b32 !important;
 }
 
-main,
-.quicklinks,
-.news-card,
-.animate-section,
-.indigent-content,
-.container.my-5,
-.mission-section,
-.news-highlights {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
+.hero,
+.txflag-banner,
+.flags-banner,
+.bluebonnet-banner,
+.health-banner,
+.latinfellowship-banner {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+.hero,
+.txflag-banner,
+.flags-banner,
+.bluebonnet-banner {
+    height: 260px !important;
+}
+
+.hero-img,
+.txflag-banner img,
+.flags-banner img,
+.bluebonnet-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+.health-banner,
+.latinfellowship-banner {
+    height: 300px !important;
+}
+
+.health-banner img,
+.latinfellowship-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 12% !important;
+}
+
+@media (min-width: 1601px) {
+
+    .hero,
+    .txflag-banner,
+    .flags-banner,
+    .bluebonnet-banner {
+        height: 400px !important;
+    }
+
+    .health-banner,
+    .latinfellowship-banner {
+        height: 440px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero,
+    .txflag-banner,
+    .flags-banner,
+    .bluebonnet-banner {
+        height: 200px !important;
+    }
+
+    .health-banner,
+    .latinfellowship-banner {
+        height: 220px !important;
+    }
 }
