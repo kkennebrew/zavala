@@ -94,7 +94,6 @@ header {
 
 .search-group {
     position: relative;
-    /* anchors the results dropdown */
     max-width: 450px;
 }
 
@@ -258,7 +257,6 @@ nav ul {
     outline-offset: -4px;
 }
 
-/* mobile overrides only, desktop rules above are untouched */
 @media (max-width: 768px) {
     nav {
         position: relative;
@@ -1086,7 +1084,13 @@ body {
     color: inherit;
 }
 
-/*-------- ACCESSIBILITY TOOLBAR --------*/
+.info-card-link:hover .info-card,
+.info-card-link:focus-visible .info-card {
+    border-color: #2a4a6a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*--------ACCESSIBILITY TOOLBAR--------*/
 
 .a11y-toolbar-inline {
     position: relative;
@@ -1117,7 +1121,6 @@ body {
     outline: 3px solid #4a7aaa;
     outline-offset: 2px;
 }
-
 
 .a11y-toggle-active {
     border-color: #ffd166;
@@ -1180,7 +1183,7 @@ body {
     outline-offset: 1px;
 }
 
-
+/* Each option shows its own On/Off state, not just the master toggle */
 .a11y-option-status {
     font-size: 0.7rem;
     font-weight: 700;
@@ -1357,7 +1360,6 @@ html.a11y-contrast .accordion-button::after {
     color: #333333 !important;
 }
 
-
 html.a11y-contrast .a11y-panel {
     background: #000000 !important;
     border-color: #ffffff !important;
@@ -1421,7 +1423,6 @@ html.a11y-dark .news-card {
     border-color: #3a4048 !important;
 }
 
-
 html.a11y-dark .mission-btn,
 html.a11y-contrast .mission-btn {
     color: #ffffff !important;
@@ -1468,7 +1469,6 @@ html.a11y-dark #contactTabs .nav-link.active {
     border-color: #3a4048 !important;
 }
 
-
 html.a11y-contrast #primary-nav {
     background-color: #000000 !important;
     border-top-color: #ffffff !important;
@@ -1510,26 +1510,26 @@ html.a11y-dark .nav-link.active {
 .hero,
 .txflag-banner,
 .flags-banner,
-.bluebonnet-banner {
+.bluebonnet-banner,
+.health-banner {
     height: 260px !important;
 }
 
 .hero-img,
 .txflag-banner img,
 .flags-banner img,
-.bluebonnet-banner img {
+.bluebonnet-banner img,
+.health-banner img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     object-position: center center !important;
 }
 
-.health-banner,
 .latinfellowship-banner {
     height: 300px !important;
 }
 
-.health-banner img,
 .latinfellowship-banner img {
     width: 100% !important;
     height: 100% !important;
@@ -1537,16 +1537,17 @@ html.a11y-dark .nav-link.active {
     object-position: center 12% !important;
 }
 
+/* Large monitors (24) */
 @media (min-width: 1601px) {
 
     .hero,
     .txflag-banner,
     .flags-banner,
-    .bluebonnet-banner {
+    .bluebonnet-banner,
+    .health-banner {
         height: 400px !important;
     }
 
-    .health-banner,
     .latinfellowship-banner {
         height: 440px !important;
     }
@@ -1557,11 +1558,85 @@ html.a11y-dark .nav-link.active {
     .hero,
     .txflag-banner,
     .flags-banner,
-    .bluebonnet-banner {
+    .bluebonnet-banner,
+    .health-banner {
         height: 200px !important;
     }
 
-    .health-banner,
+    .latinfellowship-banner {
+        height: 220px !important;
+    }
+}
+
+/* Reverted from 100vw*/
+.hero,
+.txflag-banner,
+.flags-banner,
+.bluebonnet-banner,
+.health-banner,
+.latinfellowship-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.hero,
+.txflag-banner,
+.flags-banner,
+.bluebonnet-banner,
+.health-banner {
+    height: 260px !important;
+}
+
+.hero-img,
+.txflag-banner img,
+.flags-banner img,
+.bluebonnet-banner img,
+.health-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+.latinfellowship-banner {
+    height: 300px !important;
+}
+
+.latinfellowship-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 12% !important;
+}
+
+/* Large monitors (24) */
+@media (min-width: 1601px) {
+
+    .hero,
+    .txflag-banner,
+    .flags-banner,
+    .bluebonnet-banner,
+    .health-banner {
+        height: 400px !important;
+    }
+
+    .latinfellowship-banner {
+        height: 440px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero,
+    .txflag-banner,
+    .flags-banner,
+    .bluebonnet-banner,
+    .health-banner {
+        height: 200px !important;
+    }
+
     .latinfellowship-banner {
         height: 220px !important;
     }
