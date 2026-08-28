@@ -1,9 +1,3 @@
-// Accessibility toolbar. Injects itself into the header's utility row
-// (next to the language link and search bar) rather than floating as a
-// separate fixed-position widget, so it reads as part of site navigation.
-// Preferences persist across pages via localStorage. Each option shows
-// its own On/Off state, not just the master toggle button.
-
 (function () {
     const STORAGE_KEY = "a11y-prefs";
     const defaults = { contrast: false, dark: false, fontStep: 0, underline: false };
