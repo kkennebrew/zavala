@@ -1,8 +1,3 @@
-// Header search: live dropdown as-you-type, plus Enter/button running the
-// same search immediately. Self-contained — no dependency on a separate
-// core module. Detects page language and merges live directory data
-// (contacts.js) into the searchable index when present on the page.
-
 (function () {
     const isSpanish = document.documentElement.lang === "es";
     const INDEX_URL = isSpanish ? "data/search-index-es.json" : "data/search-index.json";
