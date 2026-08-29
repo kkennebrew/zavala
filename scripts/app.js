@@ -72,8 +72,6 @@ window.addEventListener("scroll", function () {
         toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
 
-    // Close menu after a link is tapped, so it doesn't stay open
-    // when the page navigates on mobile.
     menu.querySelectorAll(".nav-link").forEach(link => {
         link.addEventListener("click", () => {
             menu.classList.remove("nav-open");

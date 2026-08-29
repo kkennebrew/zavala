@@ -54,8 +54,7 @@ function filterDirectory(query) {
     renderDirectory(filtered);
 }
 
-// If the page was opened with a #dept-... hash (e.g. from a search result),
-// expand that accordion item and scroll it into view.
+// expand accordion item and scroll it into view.
 function openFromHash() {
     const hash = window.location.hash;
     if (!hash) return;
@@ -81,6 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.addEventListener("input", e => filterDirectory(e.target.value));
     }
 
-    // Give the accordion a moment to finish rendering before expanding.
     setTimeout(openFromHash, 50);
 });
